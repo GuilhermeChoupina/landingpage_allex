@@ -1,227 +1,716 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Tennis Performance — Preparação física para tenistas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>GA Performance - Preparação Física Específica para Tênis</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Oswald:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <header id="siteHeader">
-        <div class="wrap">
-            <div class="brand">Alex Tennis <em>Performance</em></div>
-            <nav class="mainnav" id="mainNav">
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#metodo">Método</a></li>
-                    <li><a href="#planos">Planos</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato" class="nav-cta">Contato</a></li>
-                </ul>
-            </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-                <span></span><span></span><span></span>
+    <!-- ============================================ -->
+    <!-- HEADER / NAVBAR STICKY                      -->
+    <!-- ============================================ -->
+    <header class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">GA<br>PERFORMANCE</div>
+            
+            <!-- Menu hambúrguer (mobile) -->
+            <button class="navbar__burger" id="burgerMenu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+            
+            <!-- Links de navegação -->
+            <nav class="navbar__menu" id="navMenu">
+                <a href="#atletas" class="navbar__link">Atletas</a>
+                <a href="#treinadores" class="navbar__link">Treinadores</a>
+                <a href="#metodologia" class="navbar__link">Metodologia</a>
+                <a href="#sobre" class="navbar__link">Sobre Nós</a>
+            </nav>
+            
+            <!-- CTA principal -->
+            <a href="#comeco" class="btn btn--primary navbar__cta">Começar Agora</a>
         </div>
     </header>
 
-    <section class="hero" id="topo">
-        <div class="wrap">
-            <div class="hero-inner">
-                <div>
-                    <h1>Preparação física específica para quem joga tênis para vencer.</h1>
-                    <p class="lede">Programas de força, velocidade e resistência desenhados para as exigências reais da
-                        quadra — em qualquer nível, do júnior ao competidor adulto.</p>
-                    <div class="hero-actions">
-                        <a href="#planos" class="btn btn-gold">Ver planos</a>
-                        <a href="#sobre" class="btn btn-outline">Conhecer o método</a>
+    <!-- ============================================ -->
+    <!-- SEÇÃO 1 — HERO COM FOTO/VÍDEO FULL-BLEED  -->
+    <!-- ============================================ -->
+    <section class="hero" id="comeco">
+        <div class="hero__bg">
+            <video class="hero__video" poster="assets/images/hero-bg.jpg" playsinline>
+                <source src="assets/images/hero-bg.jpg" type="video/mp4">
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+        
+        <!-- Conteúdo sobreposto -->
+        <div class="hero__content">
+            <h1 class="hero__title">
+                PREPARAÇÃO<br>
+                FÍSICA<br>
+                ESPECÍFICA<br>
+                PARA TÊNIS
+            </h1>
+            
+            <p class="hero__subtitle">Seu jogo exige mais do seu corpo. Prepare-se para entregar mais em quadra.</p>
+            
+            <p class="hero__text">Preparação física especializada para juvenis competitivos, profissionais e amadores, desenvolvida a partir das demandas reais do tênis.</p>
+            
+            <div class="hero__ctas">
+                <a href="#servicos" class="btn btn--primary">Conheça Nossos Treinamentos</a>
+                <a href="#contato" class="btn btn--secondary">Falar com a Equipe</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 2 — PARA QUEM É A GA PERFORMANCE     -->
+    <!-- ============================================ -->
+    <section class="para-quem-e scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Do desenvolvimento<br>à alta performance.</h2>
+            
+            <div class="quem-blocos">
+                <!-- Bloco 1: Juvenis -->
+                <div class="quem-bloco">
+                    <div class="quem-bloco__imagem">
+                        <img src="assets/images/juvenis-competitivos.jpg" alt="Juvenis competitivos" loading="lazy">
+                        <div class="quem-bloco__overlay"></div>
+                        <h3 class="quem-bloco__categoria">JUVENIS<br>COMPETITIVOS</h3>
                     </div>
+                    <p class="quem-bloco__texto">Desenvolvimento físico estruturado para atletas que estão construindo sua base e buscando evolução dentro do circuito competitivo.</p>
+                    <a href="#servicos" class="quem-bloco__cta">Conheça o Trabalho →</a>
                 </div>
-                <div class="hero-stats">
-                    <div><b>+10</b><span>anos em preparação física esportiva</span></div>
-                    <div><b>3</b><span>continentes com atletas acompanhados</span></div>
-                    <div><b>100%</b><span>programas tênis-específicos</span></div>
+                
+                <!-- Bloco 2: Profissionais -->
+                <div class="quem-bloco">
+                    <div class="quem-bloco__imagem">
+                        <img src="assets/images/profissionais.jpg" alt="Profissionais" loading="lazy">
+                        <div class="quem-bloco__overlay"></div>
+                        <h3 class="quem-bloco__categoria">PROFISSIONAIS</h3>
+                    </div>
+                    <p class="quem-bloco__texto">Preparação física orientada às demandas do alto rendimento, calendário competitivo e necessidades específicas do atleta.</p>
+                    <a href="#servicos" class="quem-bloco__cta">Conheça o Trabalho →</a>
+                </div>
+                
+                <!-- Bloco 3: Amadores -->
+                <div class="quem-bloco">
+                    <div class="quem-bloco__imagem">
+                        <img src="assets/images/amadores.jpg" alt="Amadores" loading="lazy">
+                        <div class="quem-bloco__overlay"></div>
+                        <h3 class="quem-bloco__categoria">AMADORES</h3>
+                    </div>
+                    <p class="quem-bloco__texto">Treinamento para quem quer jogar melhor, movimentar-se melhor, ter mais resistência e aproveitar mais cada partida.</p>
+                    <a href="#servicos" class="quem-bloco__cta">Conheça o Trabalho →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about" id="sobre">
-        <div class="wrap">
-            <div class="grid">
-                <div class="about-photo">
-                    <div class="frame"></div>
-                    <img src="assets/1.jpeg" alt="Alex, treinador de preparação física para tênis, em quadra">
-                </div>
-                <div class="about-text">
-                    <h2>Formado na quadra, não só na teoria.</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                    <div class="about-signature">
-                        <div class="line"></div>
-                        <span>Alex — Tennis Performance Coach</span>
-                    </div>
-                </div>
+    <!-- ============================================ -->
+    <!-- FAIXA DIVISÓRIA - AZUL                      -->
+    <!-- ============================================ -->
+    <div class="faixa-divisoria">
+        <div class="marquee">
+            <div class="marquee__content">
+                <span>GA PERFORMANCE • PREPARAÇÃO FÍSICA PARA TÊNIS • GA PERFORMANCE • PREPARAÇÃO FÍSICA PARA TÊNIS •</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="method" id="metodo">
-        <div class="wrap">
-            <div class="method-head">
-                <h2>Três pilares, um único objetivo: render mais dentro da quadra.</h2>
-                <p>Cada programa combina trabalho de força, potência e deslocamento específico do tênis com
-                    acompanhamento individual — presencial ou online, para qualquer nível de jogo.</p>
-            </div>
-            <div class="method-grid">
-                <div class="method-card">
-                    <div class="ph"><img src="assets/5.jpeg" alt="Treino de potência com elástico de resistência">
-                    </div>
-                    <div class="body">
-                        <h3>Força &amp; potência</h3>
-                        <p>Trabalho específico para golpes mais fortes e explosão nos deslocamentos, sem perder
-                            mobilidade em quadra.</p>
-                    </div>
+    <!-- ============================================ -->
+    <!-- SEÇÃO 3 — NOSSA METODOLOGIA                -->
+    <!-- ============================================ -->
+    <section class="metodologia scroll-reveal" id="metodologia">
+        <div class="container">
+            <h2 class="section-title">Não treinamos<br>apenas o corpo.</h2>
+            <p class="section-subtitle">Treinamos o corpo para o tênis.</p>
+            
+            <div class="metodologia__grid">
+                <!-- Colagem de fotos assimétrica -->
+                <div class="metodologia__fotos">
+                    <img class="metodologia__foto-1" src="assets/images/metodologia-1.jpg" alt="Treinamento" loading="lazy">
+                    <img class="metodologia__foto-2" src="assets/images/metodologia-2.jpg" alt="Preparação" loading="lazy">
                 </div>
-                <div class="method-card">
-                    <div class="ph"><img src="assets/3.jpeg" alt="Treino individualizado em academia"></div>
-                    <div class="body">
-                        <h3>Treino individualizado</h3>
-                        <p>Programas ajustados ao seu nível, sua rotina de jogos e seu histórico de lesões — nada de
-                            plano genérico.</p>
-                    </div>
-                </div>
-                <div class="method-card">
-                    <div class="ph"><img src="assets/2.jpeg"
-                            alt="Experiência em competições e seleções de alto rendimento"></div>
-                    <div class="body">
-                        <h3>Vivência de alto rendimento</h3>
-                        <p>Metodologia testada em ambientes competitivos, adaptada para quem quer evoluir de verdade
-                            dentro da quadra.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="packages" id="planos">
-        <div class="wrap">
-            <div class="section-head">
-                <h2>Escolha o programa certo para sua fase de jogo.</h2>
-                <p>Planos fechados, com acompanhamento direto. Cada botão leva para a página de inscrição do plano
-                    escolhido.</p>
-            </div>
-            <div class="pkg-grid">
-
-                <div class="pkg-card">
-                    <h3>[Nome do Pacote 1]</h3>
-                    <p class="pkg-sub">[breve descrição do pacote]</p>
-                    <p class="pkg-price">R$ [000]<small>/mês</small></p>
-                    <ul>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
+                
+                <!-- Lista de etapas com ícones -->
+                <div class="metodologia__lista">
+                    <p class="metodologia__texto">Força, potência, velocidade, agilidade e resistência são importantes. Mas, para nós, o treinamento só está completo quando essas capacidades conseguem chegar à quadra.</p>
+                    
+                    <ul class="metodologia__etapas">
+                        <li>
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>FORÇA</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>POTÊNCIA</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>VELOCIDADE</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>AGILIDADE</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>FOOTWORK</span>
+                        </li>
+                        <li>
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>RESISTÊNCIA</span>
+                        </li>
+                        <li class="final">
+                            <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                            </svg>
+                            <span>TRANSFERÊNCIA PARA O TÊNIS</span>
+                        </li>
                     </ul>
-                    <a href="#" class="btn btn-outline-navy" data-hotmart-link="1">Quero esse plano</a>
                 </div>
-
-                <div class="pkg-card featured">
-                    <span class="pkg-tag">Mais procurado</span>
-                    <h3>[Nome do Pacote 2]</h3>
-                    <p class="pkg-sub">[breve descrição do pacote]</p>
-                    <p class="pkg-price">R$ [000]<small>/mês</small></p>
-                    <ul>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                    </ul>
-                    <a href="#" class="btn btn-gold" data-hotmart-link="2">Quero esse plano</a>
-                </div>
-
-                <div class="pkg-card">
-                    <h3>[Nome do Pacote 3]</h3>
-                    <p class="pkg-sub">[breve descrição do pacote]</p>
-                    <p class="pkg-price">R$ [000]<small>/mês</small></p>
-                    <ul>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                        <li>[Benefício ou item incluso — lorem ipsum]</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline-navy" data-hotmart-link="3">Quero esse plano</a>
-                </div>
-
             </div>
-            <p class="pkg-note">Substitua os campos entre colchetes pelo nome, valor e itens reais de cada pacote, e
-                troque o href="#" pelo link da página correspondente no Hotmart.</p>
+            
+            <!-- Bullets de aplicação -->
+            <div class="metodologia__bullets">
+                <p>FOREHAND • BACKHAND • SAQUE • DESLOCAMENTOS • ACELERAÇÃO • DESACELERAÇÃO • MUDANÇA DE DIREÇÃO</p>
+            </div>
+            
+            <a href="#metodologia" class="btn btn--primary">Conheça Nossa Metodologia</a>
         </div>
     </section>
 
-    <section class="gallery" id="galeria">
-        <div class="wrap">
-            <div class="section-head">
-                <h2>Dentro e fora da quadra.</h2>
-                <p>Um pouco da rotina de treinos, atletas acompanhados e bastidores do trabalho.</p>
-            </div>
-            <div class="gallery-grid">
-                <figure class="g1"><img src="assets/6.jpeg" alt="Treino em quadra com atleta"></figure>
-                <figure class="g2"><img src="assets/8.jpeg" alt="Momento em quadra de saibro com atleta"></figure>
-                <figure class="g3"><img src="assets/7.jpeg" alt="Atleta em quadra"></figure>
-                <figure class="g4"><img src="assets/3.jpeg" alt="Sessão de treino em academia"></figure>
+    <!-- ============================================ -->
+    <!-- FAIXA DIVISÓRIA - AZUL                      -->
+    <!-- ============================================ -->
+    <div class="faixa-divisoria">
+        <div class="marquee">
+            <div class="marquee__content">
+                <span>GA PERFORMANCE • TREINAMENTO ESTRUTURADO • GA PERFORMANCE • TREINAMENTO ESTRUTURADO •</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="contact" id="contato">
-        <div class="wrap">
-            <div class="grid">
-                <div>
-                    <h2>Vamos montar seu plano de treino?</h2>
-                    <p>Fale direto comigo para saber qual programa faz mais sentido para o seu nível de jogo e seus
-                        objetivos na quadra.</p>
-                    <a href="#planos" class="btn btn-gold">Ver os planos disponíveis</a>
-                </div>
-                <ul class="contact-list">
-                    <li>
-                        <span class="label">WhatsApp</span>
-                        <a class="value" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">[Seu
-                            WhatsApp]</a>
-                    </li>
-                    <li>
-                        <span class="label">Instagram</span>
-                        <a class="value" href="https://instagram.com/SEUUSUARIO" target="_blank"
-                            rel="noopener">[@seu.instagram]</a>
-                    </li>
-                    <li>
-                        <span class="label">E-mail</span>
-                        <a class="value" href="mailto:seuemail@dominio.com">[seuemail@dominio.com]</a>
-                    </li>
+    <!-- ============================================ -->
+    <!-- SEÇÃO 4 — NOSSOS SERVIÇOS                   -->
+    <!-- ============================================ -->
+    <section class="servicos scroll-reveal" id="servicos">
+        <div class="container">
+            <h2 class="section-title">Encontre a melhor<br>forma de treinar<br>com a GA.</h2>
+            
+            <!-- Serviço 1: Presencial -->
+            <div class="servico">
+                <div class="servico__numero">01</div>
+                <h3 class="servico__titulo">Presencial: Preparação Física Individualizada</h3>
+                <p class="servico__descricao">Treinamento presencial para atletas que buscam um trabalho totalmente direcionado às suas necessidades, momento competitivo e demandas dentro da quadra.</p>
+                <p class="servico__meta">Para: <strong>Juvenis competitivos • Profissionais • Amadores</strong></p>
+                <a href="#contato" class="btn btn--primary">Quero Treinar Presencialmente</a>
+            </div>
+            
+            <!-- Serviço 2: Online GA Training -->
+            <div class="servico">
+                <div class="servico__numero">02</div>
+                <h3 class="servico__titulo">Online: GA Training</h3>
+                <p class="servico__descricao">Seu treinamento físico para o tênis, onde você estiver.</p>
+                <p class="servico__detalhes">Programa de treinamento estruturado em 15 ou 30 semanas, desenvolvido para trabalhar as principais capacidades físicas do tenista e evoluir progressivamente sua preparação.</p>
+                
+                <p class="servico__subtitulo">VOCÊ RECEBE:</p>
+                <ul class="servico__lista">
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Treinos estruturados</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Acesso pelo MFit</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Vídeos demonstrativos</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Progressão planejada</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Força e potência</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Velocidade e agilidade</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Footwork</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Resistência</li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Exercícios específicos para o tênis</li>
                 </ul>
+                
+                <div class="servico__opcoes">
+                    <div class="servico__opcao">
+                        <h4>15 Semanas</h4>
+                        <p>Programa completo de desenvolvimento físico.</p>
+                        <a href="#contato" class="btn btn--primary">Começar 15 Semanas</a>
+                    </div>
+                    
+                    <div class="servico__opcao">
+                        <h4>30 Semanas</h4>
+                        <p>Uma jornada mais longa de evolução e desenvolvimento.</p>
+                        <a href="#contato" class="btn btn--primary">Começar 30 Semanas</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Serviço 3: Premium Consultoria -->
+            <div class="servico">
+                <div class="servico__numero">03</div>
+                <h3 class="servico__titulo">Premium: Consultoria Online Individualizada</h3>
+                <p class="servico__descricao">Seu treino. Sua rotina. Seu jogo.</p>
+                <p class="servico__detalhes">Um planejamento construído individualmente a partir dos seus objetivos, rotina, disponibilidade, histórico e demandas específicas dentro da quadra.</p>
+                <a href="#contato" class="btn btn--primary">Quero Minha Consultoria</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="wrap">
-            <div class="brand">Alex Tennis <em>Performance</em></div>
-            <p>© <span id="year"></span> Alex Tennis Performance. Todos os direitos reservados.</p>
+    <!-- ============================================ -->
+    <!-- SEÇÃO 5 — PRODUTOS PARA TREINADORES         -->
+    <!-- ============================================ -->
+    <section class="produtos scroll-reveal" id="treinadores">
+        <div class="container">
+            <h2 class="section-title">Mais repertório<br>para sua atuação.</h2>
+            <p class="section-subtitle">Tenha mais ferramentas para preparar seus atletas.</p>
+            <p class="section-descricao">Packs de exercícios desenvolvidos para treinadores e preparadores físicos que querem ampliar seu repertório e encontrar novas possibilidades para suas sessões de treinamento.</p>
+            
+            <div class="packs-grid">
+                <div class="pack">
+                    <svg class="pack__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="12" cy="19" r="2"/>
+                    </svg>
+                    <h3 class="pack__title">POTÊNCIA</h3>
+                    <p class="pack__text">Exercícios para desenvolvimento de potência aplicada ao esporte.</p>
+                </div>
+                
+                <div class="pack">
+                    <svg class="pack__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 12h12M12 6v12"/>
+                    </svg>
+                    <h3 class="pack__title">FOOTWORK</h3>
+                    <p class="pack__text">Exercícios para desenvolver movimentação e deslocamentos específicos.</p>
+                </div>
+                
+                <div class="pack">
+                    <svg class="pack__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="23 6 13.46 15.54a1.5 1.5 0 0 1-2.12 0L1 3"/>
+                    </svg>
+                    <h3 class="pack__title">VELOCIDADE</h3>
+                    <p class="pack__text">Drills para aceleração, velocidade e capacidade de reação.</p>
+                </div>
+                
+                <div class="pack">
+                    <svg class="pack__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="9"/>
+                    </svg>
+                    <h3 class="pack__title">BASES</h3>
+                    <p class="pack__text">Exercícios para trabalhar diferentes bases de suporte e organização corporal.</p>
+                </div>
+                
+                <div class="pack">
+                    <svg class="pack__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 6l9 9 9-9"/>
+                    </svg>
+                    <h3 class="pack__title">MUDANÇA DE DIREÇÃO</h3>
+                    <p class="pack__text">Desaceleração, frenagem e reorganização para novos deslocamentos.</p>
+                </div>
+                
+                <div class="pack">
+                    <svg class="pack__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>
+                    </svg>
+                    <h3 class="pack__title">COORDENATIVOS</h3>
+                    <p class="pack__text">Exercícios para coordenação, controle motor e integração de movimentos.</p>
+                </div>
+            </div>
+            
+            <p class="section-descricao">E outros conteúdos voltados à preparação física específica para o tênis.</p>
+            <a href="#contato" class="btn btn--primary">Ver Packs de Exercícios</a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 6 — MENTORIA                          -->
+    <!-- ============================================ -->
+    <section class="mentoria scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Conhecimento técnico<br>precisa virar prática.</h2>
+            <p class="section-subtitle">A GA Performance também oferece mentoria para treinadores e profissionais do esporte que querem aprofundar seus conhecimentos e aprender a aplicar a preparação física específica para o tênis na prática.</p>
+            
+            <div class="mentoria__temas">
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Planejamento</span>
+                </div>
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Seleção de exercícios</span>
+                </div>
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Organização de sessões</span>
+                </div>
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Desenvolvimento das capacidades físicas</span>
+                </div>
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Especificidade</span>
+                </div>
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Transferência para a quadra</span>
+                </div>
+                <div class="tema">
+                    <svg class="icon-pixel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>
+                    </svg>
+                    <span>Tomada de decisão na prática</span>
+                </div>
+            </div>
+            
+            <a href="#contato" class="btn btn--primary">Conhecer a Mentoria</a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FAIXA DIVISÓRIA - AZUL                      -->
+    <!-- ============================================ -->
+    <div class="faixa-divisoria">
+        <div class="marquee">
+            <div class="marquee__content">
+                <span>GA PERFORMANCE • ATLETAS EM QUADRA • GA PERFORMANCE • ATLETAS EM QUADRA •</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 7 — CARROSSEL DE ATLETAS             -->
+    <!-- ============================================ -->
+    <section class="atletas scroll-reveal" id="atletas">
+        <div class="container">
+            <h2 class="section-title">Atletas que já<br>treinaram ou treinam<br>com a GA.</h2>
+            
+            <!-- Carrossel -->
+            <div class="carrossel-wrapper">
+                <!-- Botão prev -->
+                <button class="carrossel__btn carrossel__btn--prev" id="carrosselPrev" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <!-- Carrossel container -->
+                <div class="carrossel" id="carrossel">
+                    <!-- Atletas renderizados dinamicamente via JS -->
+                </div>
+                
+                <!-- Botão next -->
+                <button class="carrossel__btn carrossel__btn--next" id="carrosselNext" aria-label="Próximo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 8 — PROVA SOCIAL - DEPOIMENTOS       -->
+    <!-- ============================================ -->
+    <section class="prova-social scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Quem treina com a GA<br>sente a diferença.</h2>
+            
+            <div class="depoimentos">
+                <!-- Depoimento 1 -->
+                <div class="depoimento">
+                    <div class="depoimento__bg">
+                        <img src="assets/images/depoimento-1.jpg" alt="Atleta 1" loading="lazy">
+                        <div class="depoimento__overlay"></div>
+                    </div>
+                    <div class="depoimento__content">
+                        <p class="depoimento__texto">"Treinar com a GA Performance transformou meu jogo em quadra. Sinto muito mais força e segurança nos movimentos."</p>
+                        <p class="depoimento__autor">João Silva</p>
+                        <p class="depoimento__meta">Juvenil Competitivo • São Paulo • 6 meses</p>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="depoimento">
+                    <div class="depoimento__bg">
+                        <img src="assets/images/depoimento-2.jpg" alt="Atleta 2" loading="lazy">
+                        <div class="depoimento__overlay"></div>
+                    </div>
+                    <div class="depoimento__content">
+                        <p class="depoimento__texto">"A especialização em preparação física para o tênis fez toda a diferença. Meu rendimento melhorou significativamente."</p>
+                        <p class="depoimento__autor">Marina Costa</p>
+                        <p class="depoimento__meta">Profissional • Rio de Janeiro • 1 ano</p>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="depoimento">
+                    <div class="depoimento__bg">
+                        <img src="assets/images/depoimento-3.jpg" alt="Atleta 3" loading="lazy">
+                        <div class="depoimento__overlay"></div>
+                    </div>
+                    <div class="depoimento__content">
+                        <p class="depoimento__texto">"Como amador, sempre tive dificuldade com resistência. Agora consigo jogar muito melhor durante toda a partida."</p>
+                        <p class="depoimento__autor">Carlos Mendes</p>
+                        <p class="depoimento__meta">Amador • Belo Horizonte • 4 meses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 9 — QUEM SOMOS                        -->
+    <!-- ============================================ -->
+    <section class="sobre scroll-reveal" id="sobre">
+        <div class="container sobre__container">
+            <div class="sobre__media">
+                <img src="assets/images/equipe-1.jpg" alt="Equipe GA Performance" loading="lazy">
+            </div>
+            
+            <div class="sobre__texto">
+                <h2 class="section-title">Preparação física<br>feita por quem vive<br>o tênis.</h2>
+                <p class="section-subtitle">A GA Performance trabalha exclusivamente com a preparação física aplicada ao tênis, conectando ciência, experiência prática e especificidade esportiva. Nosso objetivo é desenvolver atletas capazes de transformar suas capacidades físicas em desempenho dentro da quadra.</p>
+                <a href="#contato" class="btn btn--primary">Conheça a GA Performance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 10 — FAQ                              -->
+    <!-- ============================================ -->
+    <section class="faq scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Perguntas<br>Frequentes</h2>
+            
+            <div class="accordion">
+                <!-- Pergunta 1 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Qual serviço é ideal para mim?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Depende do seu nível, disponibilidade e objetivos específicos em quadra. Converse com nosso time para recomendações personalizadas.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 2 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Qual a diferença entre o GA Training e a Consultoria Individualizada?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            O GA Training é um programa estruturado pronto. A Consultoria é totalmente personalizada conforme seus objetivos e rotina.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 3 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>O GA Training é indicado para qual nível de jogador?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Funciona para todos os níveis, de amadores a profissionais. O programa se adapta às suas necessidades.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 4 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Preciso treinar em academia?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Não obrigatoriamente. Muitos exercícios podem ser feitos em casa, no clube ou em espaço aberto.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 5 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Como recebo os treinos?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Através da plataforma MFit, com vídeos demonstrativos e orientações detalhadas de cada exercício.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 6 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Posso fazer o GA Training em casa?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Sim! O programa foi desenvolvido para ser flexível e adaptável ao seu espaço de treinamento.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 7 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Como funciona a preparação presencial?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Treinos individualizados em nosso espaço ou no seu, totalmente adaptados à sua demanda e fase competitiva.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 8 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Os packs são apenas para profissionais?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Não. Os packs são para qualquer treinador ou preparador físico que queira ampliar seu repertório.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 9 -->
+                <div class="accordion__item">
+                    <button class="accordion__header" data-accordion-toggle>
+                        <span>Como funciona a mentoria?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="accordion__content">
+                        <p>
+                            <!-- TODO: preencher resposta -->
+                            Encontros estruturados com aprofundamento em preparação física específica para o tênis e prática integrada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO 11 — CTA FINAL COM FOTO FULL-BLEED    -->
+    <!-- ============================================ -->
+    <section class="cta-final scroll-reveal" id="contato">
+        <div class="cta-final__bg">
+            <img src="assets/images/cta-final-bg.jpg" alt="CTA Final" loading="lazy">
+            <div class="cta-final__overlay"></div>
+        </div>
+        
+        <div class="cta-final__content">
+            <h2 class="cta-final__title">Seu próximo nível<br>começa antes de<br>entrar em quadra.</h2>
+            <p class="cta-final__subtitle">Prepare seu corpo para executar o tênis que você quer jogar.</p>
+            
+            <div class="cta-final__buttons">
+                <a href="#servicos" class="btn btn--primary btn--large">Quero Começar Meu Treinamento</a>
+                <a href="#treinadores" class="btn btn--secondary btn--large">Quero Ampliar Meu Repertório</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container footer__content">
+            <div class="footer__section">
+                <h3 class="footer__logo">GA<br>PERFORMANCE</h3>
+                <p class="footer__description">Preparação física específica para tênis.</p>
+            </div>
+            
+            <div class="footer__section">
+                <h4>Links</h4>
+                <a href="#atletas">Atletas</a>
+                <a href="#treinadores">Treinadores</a>
+                <a href="#metodologia">Metodologia</a>
+                <a href="#sobre">Sobre Nós</a>
+            </div>
+            
+            <div class="footer__section">
+                <h4>Redes Sociais</h4>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="YouTube">YouTube</a>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 GA Performance. Todos os direitos reservados.</p>
+                <button class="footer__top-btn" id="footerTopBtn" aria-label="Voltar ao topo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
     </footer>
 
     <script src="js/javascript.js"></script>
-
 </body>
-
 </html>
