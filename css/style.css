@@ -286,6 +286,7 @@ a[class*="cta"]:not(.btn):hover {
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         flex-direction: column;
         gap: 0;
         max-height: 0;
@@ -294,7 +295,7 @@ a[class*="cta"]:not(.btn):hover {
     }
 
     .navbar__menu.active {
-        max-height: 360px;
+        max-height: 500px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -310,8 +311,9 @@ a[class*="cta"]:not(.btn):hover {
 
     .navbar__menu-cta {
         display: inline-flex;
-        margin: var(--spacing-md);
-        align-self: stretch;
+        margin: 20px 0px 20px 0px;
+        align-self: center;
+        width: auto;
     }
 }
 
@@ -346,11 +348,11 @@ a[class*="cta"]:not(.btn):hover {
 
 .hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: 80vh;
+    min-height: 80svh;
     display: flex;
-    align-items: flex-end;
-    padding-bottom: var(--spacing-2xl);
+    align-items: center;
+    padding-bottom: 0;
     overflow: hidden;
 }
 
@@ -389,12 +391,12 @@ a[class*="cta"]:not(.btn):hover {
 .hero__title {
     font-size: clamp(40px, 10vw, 96px);
     margin-bottom: var(--spacing-lg);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 .hero__subtitle {
     font-size: clamp(18px, 4vw, 24px);
-    color: #B3B3B3;
+    color: #FFFFFF;
     margin-bottom: var(--spacing-md);
     font-weight: bold;
     font-family: var(--font-body);
@@ -402,16 +404,10 @@ a[class*="cta"]:not(.btn):hover {
 
 .hero__text {
     font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
+    color: #FFFFFF;
     margin-bottom: var(--spacing-lg);
     line-height: 1.8;
     font-family: var(--font-body);
-}
-
-.hero__ctas {
-    display: flex;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
 }
 
 .quem-blocos {
@@ -1202,13 +1198,6 @@ a[class*="cta"]:not(.btn):hover {
     margin-bottom: var(--spacing-lg);
     font-family: var(--font-display);
     text-transform: uppercase;
-}
-
-.cta-final__subtitle {
-    font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-xl);
-    font-family: var(--font-body);
 }
 
 .cta-final__buttons {
