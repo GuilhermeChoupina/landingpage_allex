@@ -1,43 +1,26 @@
-/* ================================================= */
-/* CSS - GA PERFORMANCE Landing Page (v2 Editorial) */
-/* ================================================= */
-
-/* ================================================= */
-/* VARIÁVEIS E RESET                                */
-/* ================================================= */
-
 :root {
-    /* Cores */
     --color-bg: #000000;
     --color-base: #3684D6;
     --color-accent: #FFFC00;
     --color-text: #FFFFFF;
     --color-text-muted: #B3B3B3;
-    
-    /* Tipografia */
+
     --font-display: 'Anton', 'Oswald', sans-serif;
     --font-body: 'Inter', 'Manrope', sans-serif;
-    
-    /* Tamanhos */
+
     --font-size-sm: 14px;
     --font-size-base: 16px;
     --font-size-lg: 18px;
     --font-size-xl: 20px;
     --font-size-2xl: 24px;
-    --font-size-3xl: 32px;
-    --font-size-4xl: 48px;
-    --font-size-5xl: 64px;
-    --font-size-6xl: 80px;
-    
-    /* Espaçamento */
+
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 24px;
     --spacing-lg: 32px;
     --spacing-xl: 48px;
     --spacing-2xl: 64px;
-    
-    /* Outros */
+
     --border-radius: 8px;
     --transition: all 0.3s ease;
 }
@@ -50,6 +33,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -59,11 +43,8 @@ body {
     color: var(--color-text);
     background-color: var(--color-bg);
     overflow-x: hidden;
+    padding-top: 80px;
 }
-
-/* ================================================= */
-/* CONTAINER                                        */
-/* ================================================= */
 
 .container {
     max-width: 1200px;
@@ -81,11 +62,18 @@ section {
     }
 }
 
-/* ================================================= */
-/* TIPOGRAFIA                                       */
-/* ================================================= */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-display);
     font-weight: 700;
     text-transform: uppercase;
@@ -93,19 +81,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: clamp(48px, 8vw, 96px);
+    font-size: clamp(40px, 8vw, 96px);
 }
 
 h2 {
-    font-size: clamp(36px, 6vw, 72px);
+    font-size: clamp(32px, 6vw, 72px);
 }
 
 h3 {
-    font-size: clamp(24px, 5vw, 48px);
+    font-size: clamp(22px, 5vw, 48px);
 }
 
 .section-title {
-    font-size: clamp(36px, 6vw, 72px);
+    font-size: clamp(32px, 6vw, 72px);
     margin-bottom: var(--spacing-lg);
     text-align: left;
     font-family: var(--font-display);
@@ -114,7 +102,7 @@ h3 {
 }
 
 .section-subtitle {
-    font-size: var(--font-size-lg);
+    font-size: clamp(16px, 3vw, 18px);
     color: var(--color-text-muted);
     margin-bottom: var(--spacing-xl);
     max-width: 800px;
@@ -127,17 +115,13 @@ h3 {
     text-align: left;
 }
 
-/* ================================================= */
-/* BOTÕES                                           */
-/* ================================================= */
-
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: var(--font-size-base);
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
     border: 2px solid transparent;
     border-radius: var(--border-radius);
@@ -149,15 +133,11 @@ h3 {
 
 .btn--primary {
     background-color: var(--color-base);
-    color: var(--color-text);
-    border-color: var(--color-base);
 }
 
 .btn--primary:hover {
-    background-color: transparent;
-    border-color: var(--color-base);
-    color: var(--color-base);
-    box-shadow: 0 0 20px rgba(54, 132, 214, 0.3);
+    background-color: var(--color-accent);
+    color: #000000;
 }
 
 .btn--secondary {
@@ -177,22 +157,16 @@ h3 {
     font-size: var(--font-size-lg);
 }
 
-/* Link sublinhado */
 a[class*="cta"] {
-    color: var(--color-base);
-    text-decoration: underline;
+    color: var(--color-text);
     transition: var(--transition);
-    font-weight: 600;
+    font-weight: bold;
 }
 
-a[class*="cta"]:hover {
+a[class*="cta"]:not(.btn):hover {
     color: var(--color-accent);
     text-decoration-thickness: 3px;
 }
-
-/* ================================================= */
-/* NAVBAR / HEADER STICKY                           */
-/* ================================================= */
 
 .navbar {
     position: fixed;
@@ -221,12 +195,15 @@ a[class*="cta"]:hover {
 }
 
 .navbar__logo {
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 25px;
     color: var(--color-base);
     font-family: var(--font-display);
     text-transform: uppercase;
     line-height: 1;
+}
+
+.navbar__logo:hover {
+    color: var(--color-accent);
 }
 
 .navbar__menu {
@@ -246,6 +223,10 @@ a[class*="cta"]:hover {
 
 .navbar__link:hover {
     color: var(--color-accent);
+}
+
+.navbar__container a {
+    text-decoration: none;
 }
 
 .navbar__cta {
@@ -281,11 +262,11 @@ a[class*="cta"]:hover {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .navbar__burger {
         display: flex;
     }
-    
+
     .navbar__menu {
         position: absolute;
         top: 80px;
@@ -298,35 +279,28 @@ a[class*="cta"]:hover {
         overflow: hidden;
         transition: max-height 0.3s ease;
     }
-    
+
     .navbar__menu.active {
         max-height: 300px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .navbar__link {
         padding: var(--spacing-md);
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         width: 100%;
     }
-    
+
     .navbar__cta {
         margin: var(--spacing-md);
         order: -1;
     }
 }
 
-body {
-    padding-top: 80px;
-}
-
-/* ================================================= */
-/* SEÇÃO HERO - FULL-BLEED COM OVERLAY              */
-/* ================================================= */
-
 .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: flex-end;
     padding-bottom: var(--spacing-2xl);
@@ -342,7 +316,7 @@ body {
     z-index: 0;
 }
 
-.hero__video {
+.hero__bg-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -355,7 +329,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .hero__content {
@@ -366,16 +340,16 @@ body {
 }
 
 .hero__title {
-    font-size: clamp(48px, 10vw, 96px);
+    font-size: clamp(40px, 10vw, 96px);
     margin-bottom: var(--spacing-lg);
     line-height: 1;
 }
 
 .hero__subtitle {
-    font-size: var(--font-size-2xl);
-    color: var(--color-base);
+    font-size: clamp(18px, 4vw, 24px);
+    color: #FFFFFF;
     margin-bottom: var(--spacing-md);
-    font-weight: 600;
+    font-weight: bold;
     font-family: var(--font-body);
 }
 
@@ -392,10 +366,6 @@ body {
     gap: var(--spacing-md);
     flex-wrap: wrap;
 }
-
-/* ================================================= */
-/* SEÇÃO PARA QUEM É - BLOCOS COM FOTOS             */
-/* ================================================= */
 
 .quem-blocos {
     display: grid;
@@ -435,7 +405,7 @@ body {
     left: 0;
     right: 0;
     height: 40%;
-    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
 .quem-bloco__categoria {
@@ -483,10 +453,6 @@ body {
     }
 }
 
-/* ================================================= */
-/* FAIXA DIVISÓRIA AZUL COM MARQUEE                 */
-/* ================================================= */
-
 .faixa-divisoria {
     background-color: var(--color-base);
     padding: var(--spacing-lg) 0;
@@ -500,7 +466,8 @@ body {
 
 .marquee__content {
     display: flex;
-    animation: marquee 40s linear infinite;
+    width: max-content;
+    animation: marquee 30s linear infinite;
     white-space: nowrap;
     font-size: clamp(18px, 4vw, 32px);
     font-weight: 700;
@@ -510,17 +477,14 @@ body {
 }
 
 @keyframes marquee {
-    0% {
+    from {
         transform: translateX(0);
     }
-    100% {
-        transform: translateX(-100%);
+
+    to {
+        transform: translateX(-50%);
     }
 }
-
-/* ================================================= */
-/* SEÇÃO METODOLOGIA - LAYOUT ASSIMÉTRICO           */
-/* ================================================= */
 
 .metodologia__grid {
     display: grid;
@@ -623,15 +587,22 @@ body {
     .metodologia__grid {
         grid-template-columns: 1fr;
     }
-    
+
     .metodologia__fotos {
         height: 350px;
     }
 }
 
-/* ================================================= */
-/* SEÇÃO SERVIÇOS                                   */
-/* ================================================= */
+@media (max-width: 480px) {
+    .metodologia__fotos {
+        height: 280px;
+    }
+
+    .metodologia__bullets {
+        font-size: var(--font-size-sm);
+        letter-spacing: 1px;
+    }
+}
 
 .servico {
     margin-bottom: var(--spacing-2xl);
@@ -736,18 +707,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    .servico {
+        padding: var(--spacing-lg);
+    }
+
     .servico__lista {
         columns: 1;
     }
-    
+
     .servico__opcoes {
         grid-template-columns: 1fr;
     }
 }
-
-/* ================================================= */
-/* SEÇÃO PRODUTOS - GRID DE PACKS                   */
-/* ================================================= */
 
 .packs-grid {
     display: grid;
@@ -802,10 +773,6 @@ body {
     }
 }
 
-/* ================================================= */
-/* SEÇÃO MENTORIA - GRID DE TEMAS                   */
-/* ================================================= */
-
 .mentoria__temas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -829,10 +796,6 @@ body {
 .tema .icon-pixel {
     flex-shrink: 0;
 }
-
-/* ================================================= */
-/* SEÇÃO ATLETAS - CARROSSEL                       */
-/* ================================================= */
 
 .carrossel-wrapper {
     position: relative;
@@ -931,11 +894,23 @@ body {
     .carrossel__card {
         flex: 0 0 200px;
     }
+
+    .carrossel__btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carrossel__btn svg {
+        width: 18px;
+        height: 18px;
+    }
 }
 
-/* ================================================= */
-/* SEÇÃO PROVA SOCIAL - DEPOIMENTOS                */
-/* ================================================= */
+@media (max-width: 480px) {
+    .carrossel__card {
+        flex: 0 0 160px;
+    }
+}
 
 .depoimentos {
     display: grid;
@@ -976,7 +951,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .depoimento__content {
@@ -1016,11 +991,11 @@ body {
     .depoimentos {
         grid-template-columns: 1fr;
     }
-}
 
-/* ================================================= */
-/* SEÇÃO SOBRE - FOTO + TEXTO                       */
-/* ================================================= */
+    .depoimento {
+        min-height: 320px;
+    }
+}
 
 .sobre__container {
     display: grid;
@@ -1050,15 +1025,11 @@ body {
     .sobre__container {
         grid-template-columns: 1fr;
     }
-    
+
     .sobre__media {
         order: 0;
     }
 }
-
-/* ================================================= */
-/* SEÇÃO FAQ - ACCORDION MINIMALISTA                */
-/* ================================================= */
 
 .accordion {
     max-width: 900px;
@@ -1125,13 +1096,21 @@ body {
     line-height: 1.8;
 }
 
-/* ================================================= */
-/* SEÇÃO CTA FINAL - FULL-BLEED COM OVERLAY         */
-/* ================================================= */
+@media (max-width: 480px) {
+    .accordion__header {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+
+    .accordion__content p {
+        padding: 0 var(--spacing-md) var(--spacing-md);
+    }
+}
 
 .cta-final {
     position: relative;
     min-height: 80vh;
+    min-height: 80svh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1161,7 +1140,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .cta-final__content {
@@ -1172,7 +1151,7 @@ body {
 }
 
 .cta-final__title {
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(36px, 8vw, 80px);
     margin-bottom: var(--spacing-lg);
     font-family: var(--font-display);
     text-transform: uppercase;
@@ -1197,10 +1176,6 @@ body {
         flex-direction: column;
     }
 }
-
-/* ================================================= */
-/* FOOTER                                           */
-/* ================================================= */
 
 .footer {
     background-color: rgba(255, 255, 255, 0.02);
@@ -1295,16 +1270,12 @@ body {
     .footer__content {
         grid-template-columns: 1fr;
     }
-    
+
     .footer__bottom {
         flex-direction: column;
         gap: var(--spacing-md);
     }
 }
-
-/* ================================================= */
-/* ANIMAÇÕES DE SCROLL                              */
-/* ================================================= */
 
 .scroll-reveal {
     opacity: 0;
@@ -1316,10 +1287,6 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* ================================================= */
-/* ACESSIBILIDADE E RESPONSIVIDADE                  */
-/* ================================================= */
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -1337,13 +1304,10 @@ button:focus-visible {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 @media (max-width: 480px) {
-    :root {
-        --font-size-4xl: 28px;
-    }
-    
     .btn--large {
         width: 100%;
     }
