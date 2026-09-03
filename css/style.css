@@ -108,7 +108,7 @@ h3 {
 
 .section-subtitle {
     font-size: clamp(16px, 3vw, 18px);
-    color: var(--color-text-muted);
+    color: #FFFFFF;
     margin-bottom: var(--spacing-xl);
     max-width: 800px;
     text-align: left;
@@ -348,21 +348,27 @@ a[class*="cta"]:not(.btn):hover {
 
 .hero {
     position: relative;
-    min-height: 80vh;
-    min-height: 80svh;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: 80px;
     display: flex;
     align-items: center;
-    padding-bottom: 0;
-    overflow: hidden;
+    overflow: visible;
+    /* o texto pode "crescer" sem cortar nada */
 }
 
 .hero__bg {
-    position: absolute;
+    position: fixed;
+    /* era absolute — agora fica travada na tela */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    z-index: -1;
+    /* fica atrás de tudo, inclusive do navbar */
 }
 
 .hero__bg-image {
@@ -1044,34 +1050,114 @@ a[class*="cta"]:not(.btn):hover {
 .sobre__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
-    align-items: center;
+    gap: var(--spacing-lg);
+    align-items: start;
 }
 
 .sobre__media {
+    position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
-    order: -1;
+    aspect-ratio: 3 / 4;
 }
 
 .sobre__media img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     filter: grayscale(70%);
 }
 
-.sobre__texto .btn {
+.sobre__texto {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
     margin-top: var(--spacing-lg);
 }
 
-@media (max-width: 1024px) {
+.sobre__texto .section-title {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.sobre__texto .section-subtitle {
+    align-self: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre__texto .btn {
+    align-self: flex-end;
+    margin-top: var(--spacing-lg);
+}
+
+.sobre__hint {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.sobre__hint-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-text);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 8px;
+    backdrop-filter: blur(4px);
+    transition: var(--transition);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.sobre__hint:hover .sobre__hint-icon {
+    background-color: var(--color-base);
+    transform: scale(1.1);
+}
+
+.sobre__hint-text {
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: max-width 0.4s ease, max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease, margin 0.4s ease;
+}
+
+.sobre__hint:hover .sobre__hint-text {
+    max-width: 280px;
+    max-height: 200px;
+    opacity: 1;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.sobre__hint-text p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
     .sobre__container {
         grid-template-columns: 1fr;
     }
 
-    .sobre__media {
-        order: 0;
+    .sobre__texto .section-title,
+    .sobre__texto .section-subtitle,
+    .sobre__texto .btn {
+        align-self: center;
+        text-align: center;
     }
 }
 
