@@ -46,7 +46,7 @@ body {
     background-color: var(--color-bg);
     overflow-x: hidden;
     max-width: 100%;
-    padding-top: 80px;
+    padding-top: 30px;
 }
 
 .container {
@@ -507,7 +507,13 @@ a[class*="cta"]:not(.btn):hover {
     background-color: var(--color-base);
     padding: var(--spacing-lg) 0;
     overflow: hidden;
-    margin: var(--spacing-2xl) 0;
+    margin: 30px 0px 30px 0px;
+}
+
+@media (max-width: 768px) {
+    .faixa-divisoria {
+        padding: var(--spacing-md) 0;
+    }
 }
 
 .marquee {
@@ -624,12 +630,11 @@ a[class*="cta"]:not(.btn):hover {
     font-size: var(--font-size-base);
     color: var(--color-text-muted);
     text-align: center;
-    margin: var(--spacing-xl) 0;
     padding: var(--spacing-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
@@ -1246,33 +1251,7 @@ a[class*="cta"]:not(.btn):hover {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-}
-
-.cta-final__bg {
-    position: absolute;
-    object-position: bottom;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-}
-
-.cta-final__bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-    filter: grayscale(80%);
-}
-
-.cta-final__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    margin-bottom: 30px;
 }
 
 .cta-final__content {
@@ -1305,30 +1284,25 @@ a[class*="cta"]:not(.btn):hover {
 .footer {
     background-color: rgba(255, 255, 255, 0.02);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    padding: clamp(32px, 5vw, 56px) 0 20px;
 }
 
 .footer__content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
+    grid-template-columns: minmax(0, 1.4fr) minmax(160px, 0.6fr);
+    gap: clamp(32px, 6vw, 72px);
 }
 
 .footer__section {
-    padding: 0 var(--spacing-md);
-}
-
-.footer__section h4 {
-    gap: 20px;
+    min-width: 0;
 }
 
 .footer__logo {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: clamp(36px, 5vw, 50px);
+    font-weight: bold;
     font-family: var(--font-display);
     margin-bottom: var(--spacing-md);
-    color: var(--color-base);
+    color: var(--color-text);
     text-transform: uppercase;
     line-height: 1;
 }
@@ -1336,15 +1310,16 @@ a[class*="cta"]:not(.btn):hover {
 .footer__description {
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
+    max-width: 260px;
 }
 
 .footer__section h4 {
-    font-size: var(--font-size-base);
+    font-size: 25px;
     margin-bottom: var(--spacing-md);
-    color: var(--color-text);
+    color: #3684D6;
     text-transform: uppercase;
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .footer__section a {
@@ -1353,6 +1328,7 @@ a[class*="cta"]:not(.btn):hover {
     text-decoration: none;
     font-size: var(--font-size-sm);
     margin-bottom: var(--spacing-sm);
+    overflow-wrap: anywhere;
     transition: var(--transition);
 }
 
@@ -1361,24 +1337,39 @@ a[class*="cta"]:not(.btn):hover {
 }
 
 .footer__bottom {
+    grid-column: 1 / -1;
     text-align: center;
-    padding-top: var(--spacing-lg);
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
     .footer__content {
         grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        text-align: center;
+    }
+
+    .footer__description {
+        margin: 0 auto;
     }
 
     .footer__bottom {
-        flex-direction: column;
-        gap: var(--spacing-md);
+        grid-column: auto;
+        padding-top: var(--spacing-md);
+    }
+}
+
+@media (max-width: 380px) {
+    .footer {
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .footer__content {
+        gap: var(--spacing-lg);
     }
 }
 
