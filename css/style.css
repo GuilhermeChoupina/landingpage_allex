@@ -1138,6 +1138,13 @@ a[class*="cta"]:not(.btn):hover {
     transition: max-width 0.4s ease, max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease, margin 0.4s ease;
 }
 
+.sobre__hint-text h4 {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 10px;
+    font-family: var(--spacing-lg);
+}
+
 .sobre__hint:hover .sobre__hint-text {
     max-width: 280px;
     max-height: 200px;
