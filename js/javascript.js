@@ -13,29 +13,34 @@ const LINKS = {
 
 const ATLETAS = [
     {
-        nome: "João Silva",
+        nome: "Helena Alves",
         categoria: "Juvenil Competitivo",
-        foto: "assets/images/atleta-01.jpg",
+        foto: "assets/images/helena_alves.png",
     },
     {
-        nome: "Marina Costa",
+        nome: "Diana Shnaider",
         categoria: "Profissional",
-        foto: "assets/images/atleta-02.jpg",
+        foto: "assets/images/diana.png",
     },
     {
-        nome: "Lucas Santos",
+        nome: "Manuela Banietti",
         categoria: "Juvenil Competitivo",
-        foto: "assets/images/atleta-03.jpg",
+        foto: "assets/images/manuela_banietti.png",
     },
     {
-        nome: "Beatriz Oliveira",
+        nome: "Magda Linette",
         categoria: "Profissional",
-        foto: "assets/images/atleta-04.jpg",
+        foto: "assets/images/magda.png",
     },
     {
-        nome: "Rafael Mendes",
+        nome: "Caio Silva",
         categoria: "Amador",
-        foto: "assets/images/atleta-05.jpg",
+        foto: "assets/images/caio_silva.png",
+    },
+    {
+        nome: "Tiago lopes",
+        categoria: "Amador",
+        foto: "assets/images/tiago_lopes.png",
     },
 ];
 
