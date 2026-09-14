@@ -11,6 +11,46 @@ const LINKS = {
     youtube: "#",
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+    initHero();
+    initNavbar();
+    initCarrossel();
+    initAccordion();
+    initScrollReveal();
+    initFooterTopBtn();
+    initSmoothScroll();
+});
+
+function initHero() {
+    const heroVideo = document.getElementById('heroVideo');
+    const heroPlayBtn = document.getElementById('heroPlayBtn');
+    const heroMuteBtn = document.getElementById('heroMuteBtn');
+    const heroMedia = document.getElementById('heroMedia');
+
+    if (!heroVideo || !heroPlayBtn || !heroMuteBtn || !heroMedia) return;
+
+    heroPlayBtn.addEventListener('click', () => {
+        heroVideo.play();
+    });
+
+    heroVideo.addEventListener('click', () => {
+        heroVideo.paused ? heroVideo.play() : heroVideo.pause();
+    });
+
+    heroVideo.addEventListener('play', () => {
+        heroMedia.classList.add('is-playing');
+    });
+
+    heroVideo.addEventListener('pause', () => {
+        heroMedia.classList.remove('is-playing');
+    });
+
+    heroMuteBtn.addEventListener('click', () => {
+        heroVideo.muted = !heroVideo.muted;
+        heroMuteBtn.classList.toggle('is-unmuted', !heroVideo.muted);
+    });
+}
+
 const ATLETAS = [
     {
         nome: "Helena Alves",
@@ -44,15 +84,6 @@ const ATLETAS = [
     },
 ];
 
-document.addEventListener("DOMContentLoaded", function () {
-    initNavbar();
-    initCarrossel();
-    initAccordion();
-    initScrollReveal();
-    initFooterTopBtn();
-    initSmoothScroll();
-});
-
 function initNavbar() {
     const burgerMenu = document.getElementById("burgerMenu");
     const navMenu = document.getElementById("navMenu");
@@ -61,15 +92,16 @@ function initNavbar() {
     if (!burgerMenu || !navMenu || !navbar) return;
 
     burgerMenu.addEventListener("click", function () {
-        this.classList.toggle("active");
-        navMenu.classList.toggle("active");
+        const isOpen = this.classList.toggle("active");
+        navMenu.classList.toggle("active", isOpen);
+        this.setAttribute("aria-expanded", String(isOpen));
+        this.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
     });
 
-    const navLinks = navMenu.querySelectorAll(".navbar__link");
+    const navLinks = navMenu.querySelectorAll("a");
     navLinks.forEach((link) => {
         link.addEventListener("click", function () {
-            burgerMenu.classList.remove("active");
-            navMenu.classList.remove("active");
+            closeMobileMenu();
         });
     });
 
@@ -78,10 +110,22 @@ function initNavbar() {
             !burgerMenu.contains(event.target) &&
             !navMenu.contains(event.target)
         ) {
-            burgerMenu.classList.remove("active");
-            navMenu.classList.remove("active");
+            closeMobileMenu();
         }
     });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) {
+            closeMobileMenu();
+        }
+    });
+
+    function closeMobileMenu() {
+        burgerMenu.classList.remove("active");
+        navMenu.classList.remove("active");
+        burgerMenu.setAttribute("aria-expanded", "false");
+        burgerMenu.setAttribute("aria-label", "Abrir menu");
+    }
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {

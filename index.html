@@ -18,7 +18,8 @@
                 <div class="navbar__logo">GA<br>PERFORMANCE</div>
             </a>
 
-            <button class="navbar__burger" id="burgerMenu" aria-label="Menu">
+            <button class="navbar__burger" id="burgerMenu" type="button" aria-label="Abrir menu"
+                aria-controls="navMenu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -41,17 +42,44 @@
             <img class="hero__bg-image" src="assets/images/img_desf.jpg" alt="Atleta em treinamento de tênis">
             <div class="hero__overlay"></div>
         </div>
+        <div class="container hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    PREPARAÇÃO<br>
+                    FÍSICA<br>
+                    ESPECÍFICA<br>
+                    PARA TÊNIS
+                </h1>
 
-        <div class="hero__content">
-            <h1 class="hero__title">
-                PREPARAÇÃO<br>
-                FÍSICA<br>
-                ESPECÍFICA<br>
-                PARA TÊNIS
-            </h1>
+                <p class="hero__text">Preparação física especializada para juvenis competitivos, profissionais e
+                    amadores, desenvolvida a partir das demandas reais do tênis.</p>
+            </div>
 
-            <p class="hero__text">Preparação física especializada para juvenis competitivos, profissionais e amadores,
-                desenvolvida a partir das demandas reais do tênis.</p>
+            <div class="hero__media" id="heroMedia">
+                <video class="hero__video" id="heroVideo" muted loop playsinline
+                    poster="assets/images/hero-video-poster.jpg">
+                    <source src="assets/video/hero-video.mp4" type="video/mp4">
+                </video>
+
+                <button class="hero__play-btn" id="heroPlayBtn" aria-label="Reproduzir vídeo">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                    </svg>
+                </button>
+
+                <button class="hero__mute-btn" id="heroMuteBtn" aria-label="Ativar som">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -161,8 +189,7 @@
                 <div class="metodologia__fotos">
                     <img class="metodologia__foto-1" src="assets/images/allex_treino.jpg" alt="Treinamento"
                         loading="lazy">
-                    <img class="metodologia__foto-2" src="assets/images/diogo_cbt.jpg" alt="Preparação"
-                        loading="lazy">
+                    <img class="metodologia__foto-2" src="assets/images/diogo_cbt.jpg" alt="Preparação" loading="lazy">
                 </div>
 
                 <div class="metodologia__lista">
@@ -504,6 +531,77 @@
         </div>
     </section>
 
+    <section class="equipe scroll-reveal" id="equipe">
+        <div class="container">
+            <h2 class="section-title">Nossa equipe<br>em quadra.</h2>
+            <p class="section-subtitle">Profissionais que compõem o time GA Performance nas diferentes modalidades.</p>
+
+            <div class="equipe__grid">
+                <div class="equipe__card">
+                    <h3 class="equipe__categoria">Tênis</h3>
+
+                    <div class="equipe__subgrupo">
+                        <h4 class="equipe__subtitulo">Preparador Auxiliar do Cassiano Costa</h4>
+                        <ul class="equipe__lista">
+                            <li>Diana Shnaider<span class="equipe__ranking">#12 best ranking — Rússia</span></li>
+                            <li>Magda Linette<span class="equipe__ranking">#19 best ranking — Polônia</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="equipe__subgrupo">
+                        <h4 class="equipe__subtitulo">Preparador Físico Pro</h4>
+                        <ul class="equipe__lista">
+                            <li>Tiago Lopes</li>
+                            <li>Fernando Romboli</li>
+                            <li>Caio Silva</li>
+                            <li>Oscar Gutierrez</li>
+                            <li>Thales Turini</li>
+                            <li>Eduarda Piai</li>
+                            <li>Nathaly Kurata</li>
+                            <li>Geórgia Gulin</li>
+                            <li>Sofia Mendonça</li>
+                            <li>Gabriela Cho</li>
+                        </ul>
+                    </div>
+
+                    <div class="equipe__subgrupo">
+                        <h4 class="equipe__subtitulo">Preparador Físico Juvenil</h4>
+                        <ul class="equipe__lista">
+                            <li>Manuela Banietti</li>
+                            <li>Helena Alves</li>
+                            <li>Yuna Shibata</li>
+                            <li>Isabella Matos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="equipe__card">
+                    <h3 class="equipe__categoria">Squash</h3>
+
+                    <div class="equipe__subgrupo">
+                        <h4 class="equipe__subtitulo">Pro</h4>
+                        <ul class="equipe__lista">
+                            <li>Catalina Peláez<span class="equipe__ranking">#56 best ranking — Colômbia</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="equipe__card">
+                    <h3 class="equipe__categoria">Pickleball</h3>
+
+                    <div class="equipe__subgrupo">
+                        <h4 class="equipe__subtitulo">Pro</h4>
+                        <ul class="equipe__lista">
+                            <li>João Pedro Agulha<span class="equipe__ranking">Vice-campeão mundial juvenil</span></li>
+                            <li>Ayke</li>
+                            <li>Gabriel Batista</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="prova-social scroll-reveal">
         <div class="container">
             <h2 class="section-title">Quem treina com a GA<br>sente a diferença.</h2>
@@ -511,40 +609,43 @@
             <div class="depoimentos">
                 <div class="depoimento">
                     <div class="depoimento__bg">
-                        <img src="assets/images/manuela_banietti.png" alt="Atleta 1" loading="lazy">
+                        <img src="assets/images/olivia.png" alt="Atleta 1" loading="lazy">
                         <div class="depoimento__overlay"></div>
                     </div>
                     <div class="depoimento__content">
-                        <p class="depoimento__texto">"Treinar com a GA Performance transformou meu jogo em quadra. Sinto
-                            muito mais força e segurança nos movimentos."</p>
-                        <p class="depoimento__autor">Manuella Banietti</p>
+                        <p class="depoimento__texto">"Minhas filhas mudaram a forma de jogar tênis depois que começaram
+                            a treinar a parte física com o Allex/Ganan, criaram maior consciência do corpo e melhoram o
+                            desempenho em quadra."</p>
+                        <p class="depoimento__autor">Simone Sahade - Mãe de Olivia ( atleta juvenil )</p>
                         <p class="depoimento__meta">Juvenil Competitivo • São Paulo</p>
                     </div>
                 </div>
 
                 <div class="depoimento">
                     <div class="depoimento__bg">
-                        <img src="assets/images/magda.png" alt="Atleta 2" loading="lazy">
+                        <img src="assets/images/lucas.png" alt="Atleta 2" loading="lazy">
                         <div class="depoimento__overlay"></div>
                     </div>
                     <div class="depoimento__content">
-                        <p class="depoimento__texto">"A especialização em preparação física para o tênis fez toda a
-                            diferença. Meu rendimento melhorou significativamente."</p>
-                        <p class="depoimento__autor">Magda Linette</p>
-                        <p class="depoimento__meta">Profissional • Polônia</p>
+                        <p class="depoimento__texto">"O trabalho do Allex com o Lucas tem sido excelente dá pra ver a
+                            evolução em intensidade, agilidade e resistência em quadra, e isso deu ao Lucas confiança."
+                        </p>
+                        <p class="depoimento__autor">Alexandre - Pai de Lucas ( atleta juvenil )</p>
+                        <p class="depoimento__meta">Atleta juvenil • São Paulo</p>
                     </div>
                 </div>
 
                 <div class="depoimento">
                     <div class="depoimento__bg">
-                        <img src="assets/images/caio_silva.png" alt="Atleta 3" loading="lazy">
+                        <img src="assets/images/mariana.png" alt="Atleta 3" loading="lazy">
                         <div class="depoimento__overlay"></div>
                     </div>
                     <div class="depoimento__content">
-                        <p class="depoimento__texto">"Como amador, sempre tive dificuldade com resistência. Agora
-                            consigo jogar muito melhor durante toda a partida."</p>
-                        <p class="depoimento__autor">Caio Silva</p>
-                        <p class="depoimento__meta">Amador • São Paulo</p>
+                        <p class="depoimento__texto">"O acompanhamento próximo e o planejamento individualizado fizeram
+                            muita diferença, sempre respeitando a idade, o desenvolvimento e as necessidades específicas
+                            do tênis."</p>
+                        <p class="depoimento__autor">Dr Marcos - Pai da Mariana ( atleta juvenil )</p>
+                        <p class="depoimento__meta">Atleta juvenil • São Paulo</p>
                     </div>
                 </div>
     </section>
@@ -698,8 +799,8 @@
 
             <div class="footer__section">
                 <h4>Redes Sociais</h4>
-                <a href="https://www.instagram.com/gananfit.performance?stkn=MThlbHY0d3Vtd3U0dQ%3D%3D&utm_source=qr_code" target="_blank"
-                    aria-label="Instagram">Instagram</a>
+                <a href="https://www.instagram.com/gananfit.performance?stkn=MThlbHY0d3Vtd3U0dQ%3D%3D&utm_source=qr_code"
+                    target="_blank" aria-label="Instagram">Instagram</a>
                 <a href="https://wa.me/message/GTINIB37IOU4I1" target="_blank">Whatsapp</a>
             </div>
 
