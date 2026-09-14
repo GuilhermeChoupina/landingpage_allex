@@ -43,7 +43,9 @@ body {
     line-height: 1.6;
     color: var(--color-text);
     background-color: var(--color-bg);
-    background-image: url("../assets/images/img_desf.jpg");
+    /* Escurece a imagem sem reduzir a opacidade do conteúdo. */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../assets/images/img_desf.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -694,7 +696,7 @@ h3 {
 
 .metodologia__texto {
     font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
+    color: white;
     margin-bottom: var(--spacing-lg);
     line-height: 1.8;
 }
@@ -797,7 +799,7 @@ h3 {
 
 .servico__descricao {
     font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
+    color: white;
     margin-bottom: var(--spacing-md);
     line-height: 1.8;
 }
@@ -810,7 +812,7 @@ h3 {
 
 .servico__detalhes {
     font-size: var(--font-size-base);
-    color: var(--color-text-muted);
+    color: white;
     margin-bottom: var(--spacing-lg);
     line-height: 1.8;
 }
@@ -832,7 +834,7 @@ h3 {
 }
 
 .servico__lista li {
-    color: var(--color-text-muted);
+    color: white;
     padding: var(--spacing-sm) 0;
     display: flex;
     align-items: center;
@@ -868,7 +870,7 @@ h3 {
 }
 
 .servico__opcao p {
-    color: var(--color-text-muted);
+    color: white;
     margin-bottom: var(--spacing-md);
 }
 
@@ -957,7 +959,7 @@ h3 {
 .equipe__lista li {
     position: relative;
     padding: 6px 0 6px 18px;
-    color: var(--color-text);
+    color: white;
     font-size: var(--font-size-base);
     line-height: 1.4;
 }
@@ -1084,7 +1086,7 @@ h3 {
     right: 0;
     background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
     padding: var(--spacing-lg);
-    color: var(--color-text);
+    color: white;
 }
 
 .carrossel__name {
@@ -1207,7 +1209,7 @@ h3 {
 
 .depoimento__texto {
     font-size: clamp(14px, 3vw, 18px);
-    color: var(--color-text);
+    color: white;
     font-style: italic;
     margin-bottom: var(--spacing-md);
     line-height: 1.8;
@@ -1216,7 +1218,7 @@ h3 {
 .depoimento__autor {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--color-text);
+    color: white;
     margin-bottom: var(--spacing-xs);
     font-family: var(--font-display);
 }
@@ -1345,7 +1347,7 @@ h3 {
 
 .sobre__hint-text p {
     font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
+    color: white;
     line-height: 1.6;
     text-align: right;
 }
@@ -1424,7 +1426,7 @@ h3 {
 
 .accordion__content p {
     padding: 0 var(--spacing-lg) var(--spacing-lg);
-    color: var(--color-text-muted);
+    color: white;
     line-height: 1.8;
 }
 
@@ -1505,7 +1507,7 @@ h3 {
 }
 
 .footer__description {
-    color: var(--color-text-muted);
+    color: white;
     font-size: var(--font-size-sm);
     max-width: 260px;
 }
@@ -1513,7 +1515,7 @@ h3 {
 .footer__section h4 {
     font-size: 25px;
     margin-bottom: var(--spacing-md);
-    color: #3684D6;
+    color: white;
     text-transform: uppercase;
     font-family: var(--font-display);
     font-weight: bold;
@@ -1521,7 +1523,7 @@ h3 {
 
 .footer__section a {
     display: block;
-    color: var(--color-text-muted);
+    color: white;
     text-decoration: none;
     font-size: var(--font-size-sm);
     margin-bottom: var(--spacing-sm);
@@ -1538,7 +1540,7 @@ h3 {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--color-text-muted);
+    color: white;
     font-size: var(--font-size-sm);
     line-height: 1.5;
 }
