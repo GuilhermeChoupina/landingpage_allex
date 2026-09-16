@@ -74,12 +74,12 @@ const ATLETAS = [
     },
     {
         nome: "Caio Silva",
-        categoria: "Amador",
+        categoria: "Profissional",
         foto: "assets/images/caio_silva.png",
     },
     {
         nome: "Tiago lopes",
-        categoria: "Amador",
+        categoria: "Profissional",
         foto: "assets/images/tiago_lopes.png",
     },
 ];
