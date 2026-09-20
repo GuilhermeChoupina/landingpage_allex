@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initScrollReveal();
     initFooterTopBtn();
     initSmoothScroll();
+    initLightbox();
 });
 
 function initHero() {
@@ -133,6 +134,35 @@ function initNavbar() {
         } else {
             navbar.classList.remove("scrolled");
         }
+    });
+}
+
+function initLightbox() {
+    const imgs = document.querySelectorAll(".print-card img");
+    if (imgs.length === 0) return;
+
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.innerHTML = '<button class="lightbox__close" aria-label="Fechar">&times;</button><img class="lightbox__img" alt="">';
+    document.body.appendChild(box);
+
+    const big = box.querySelector(".lightbox__img");
+    const close = () => box.classList.remove("open");
+
+    imgs.forEach((img) => {
+        img.addEventListener("click", () => {
+            big.src = img.src;
+            big.alt = img.alt;
+            box.classList.add("open");
+        });
+    });
+
+    box.addEventListener("click", (e) => {
+        if (e.target !== big) close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
     });
 }
 

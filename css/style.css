@@ -1238,6 +1238,103 @@ h3 {
     }
 }
 
+.prints-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+    align-items: start;
+}
+
+.print-card {
+    border: 1px solid var(--color-base);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: rgba(54, 132, 214, 0.05);
+    cursor: zoom-in;
+    transition: var(--transition);
+}
+
+.print-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+}
+
+.print-card img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .prints-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .prints-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    background-color: rgba(0, 0, 0, 0.92);
+    cursor: zoom-out;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: var(--border-radius);
+}
+
+.lightbox__close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.print-card__legenda {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: default;
+}
+
+.print-card__nome {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    color: white;
+}
+
+.print-card__meta {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+}
+
 .sobre__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
