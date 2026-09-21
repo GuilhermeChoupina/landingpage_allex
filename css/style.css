@@ -157,14 +157,14 @@ h3 {
 
 .btn--secondary {
     background-color: transparent;
-    color: var(--color-text);
-    border-color: var(--color-text);
+    color: #FFFFFF;
+    border-color: #3684D6;
 }
 
 .btn--secondary:hover {
-    background-color: var(--color-base);
-    border-color: var(--color-base);
-    color: var(--color-text);
+    background-color: #FFFC00;
+    border-color: #FFFC00;
+    color: #000000;
 }
 
 .btn--large {
