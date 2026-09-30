@@ -1454,7 +1454,8 @@ h3 {
     transition: max-width 0.4s ease, max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease, margin 0.4s ease;
 }
 
-.sobre__hint:hover .sobre__hint-text {
+/* Toque/clique funciona em qualquer dispositivo */
+.sobre__hint.active .sobre__hint-text {
     max-width: 280px;
     max-height: 300px;
     opacity: 1;
@@ -1496,6 +1497,16 @@ h3 {
     .sobre__texto .btn {
         align-self: center;
         text-align: center;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .sobre__hint:hover .sobre__hint-text {
+        max-width: 280px;
+        max-height: 300px;
+        opacity: 1;
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-sm);
     }
 }
 

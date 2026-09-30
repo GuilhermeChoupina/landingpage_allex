@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initFooterTopBtn();
     initSmoothScroll();
     initLightbox();
+    initSobreHint();
 });
 
 function initHero() {
@@ -52,6 +53,24 @@ function initHero() {
             heroVideo.muted = !heroVideo.muted;
             heroMuteBtn.classList.toggle('is-unmuted', !heroVideo.muted);
         });
+    });
+}
+
+function initSobreHint() {
+    const hints = document.querySelectorAll('.sobre__hint');
+    if (hints.length === 0) return;
+
+    hints.forEach((hint) => {
+        hint.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isActive = this.classList.contains('active');
+            hints.forEach((h) => h.classList.remove('active'));
+            if (!isActive) this.classList.add('active');
+        });
+    });
+
+    document.addEventListener('click', function () {
+        hints.forEach((h) => h.classList.remove('active'));
     });
 }
 
