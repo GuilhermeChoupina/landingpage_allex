@@ -23,32 +23,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function initHero() {
-    const heroVideo = document.getElementById('heroVideo');
-    const heroPlayBtn = document.getElementById('heroPlayBtn');
-    const heroMuteBtn = document.getElementById('heroMuteBtn');
-    const heroMedia = document.getElementById('heroMedia');
+    const heroMediaBlocks = document.querySelectorAll('.hero__media');
 
-    if (!heroVideo || !heroPlayBtn || !heroMuteBtn || !heroMedia) return;
+    heroMediaBlocks.forEach((heroMedia) => {
+        const heroVideo = heroMedia.querySelector('.hero__video');
+        const heroPlayBtn = heroMedia.querySelector('.hero__play-btn');
+        const heroMuteBtn = heroMedia.querySelector('.hero__mute-btn');
 
-    heroPlayBtn.addEventListener('click', () => {
-        heroVideo.play();
-    });
+        if (!heroVideo || !heroPlayBtn || !heroMuteBtn) return;
 
-    heroVideo.addEventListener('click', () => {
-        heroVideo.paused ? heroVideo.play() : heroVideo.pause();
-    });
+        heroPlayBtn.addEventListener('click', () => {
+            heroVideo.play();
+        });
 
-    heroVideo.addEventListener('play', () => {
-        heroMedia.classList.add('is-playing');
-    });
+        heroVideo.addEventListener('click', () => {
+            heroVideo.paused ? heroVideo.play() : heroVideo.pause();
+        });
 
-    heroVideo.addEventListener('pause', () => {
-        heroMedia.classList.remove('is-playing');
-    });
+        heroVideo.addEventListener('play', () => {
+            heroMedia.classList.add('is-playing');
+        });
 
-    heroMuteBtn.addEventListener('click', () => {
-        heroVideo.muted = !heroVideo.muted;
-        heroMuteBtn.classList.toggle('is-unmuted', !heroVideo.muted);
+        heroVideo.addEventListener('pause', () => {
+            heroMedia.classList.remove('is-playing');
+        });
+
+        heroMuteBtn.addEventListener('click', () => {
+            heroVideo.muted = !heroVideo.muted;
+            heroMuteBtn.classList.toggle('is-unmuted', !heroVideo.muted);
+        });
     });
 }
 

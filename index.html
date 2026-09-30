@@ -56,30 +56,58 @@
 
             </div>
 
-            <div class="hero__media" id="heroMedia">
-                <video class="hero__video" id="heroVideo" muted loop playsinline
-                    poster="assets/images/hero-video-poster.jpg">
-                    <source src="assets/video/hero-video.mp4" type="video/mp4">
-                </video>
+            <div class="hero__media-group">
+                <div class="hero__media" data-video="atleta">
+                    <video class="hero__video" muted loop playsinline poster="assets/images/hero-video-poster.jpg">
+                        <source src="assets/video/hero-video.mp4" type="video/mp4">
+                    </video>
 
-                <button class="hero__play-btn" id="heroPlayBtn" aria-label="Reproduzir vídeo">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="6 3 20 12 6 21 6 3"></polygon>
-                    </svg>
-                </button>
+                    <button class="hero__play-btn" aria-label="Reproduzir vídeo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>
+                    </button>
 
-                <button class="hero__mute-btn" id="heroMuteBtn" aria-label="Ativar som">
-                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <line x1="23" y1="9" x2="17" y2="15"></line>
-                        <line x1="17" y1="9" x2="23" y2="15"></line>
-                    </svg>
-                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-                    </svg>
-                </button>
+                    <button class="hero__mute-btn" aria-label="Ativar som">
+                        <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                        <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hero__media" data-video="allex">
+                    <video class="hero__video" muted loop playsinline poster="assets/images/hero-video-poster.jpg">
+                        <source src="assets/video/video-allex.mp4" type="video/mp4">
+                    </video>
+
+                    <button class="hero__play-btn" aria-label="Reproduzir vídeo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>
+                    </button>
+
+                    <button class="hero__mute-btn" aria-label="Ativar som">
+                        <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                        <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -134,8 +162,18 @@
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                     <div class="sobre__hint-text">
-                        <p>Somos especialistas em preparação física para tênis, unindo ciência do esporte e vivência de
-                            quadra para transformar o desempenho dos nossos atletas.</p>
+                        <ul>
+                            <li>Preparador Físico de tenista há 15 anos.</li>
+                            <li>Pós-graduado em Treinamento Físico de alto rendimento. </li>
+                            <li>Preparação Física avançada pela ITF - nível 3</li>
+                            <li>Preparação e acompanhamento em torneios de atletas profissionais dos circuitos ATP, WTA
+                                e ITF, períodos de base e fases competitivas de alto nível.</li>
+                            <li>Atualmente, atua como coordenador da preparação física da equipe Tiago Lopes.</li>
+                            <li>Destaca-se o acompanhamento da pré-temporada 2026 das atletas Diana Shnaider (#21 WTA) e
+                                Magda Linette (#50 WTA).</li>
+                            <li>Preparador físico da CBT - Confederação Brasileira de Tênis U12 e membro da mentoria de
+                                preparação física da CBT.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -149,8 +187,15 @@
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                     <div class="sobre__hint-text">
-                        <p>Somos especialistas em preparação física para tênis, unindo ciência do esporte e vivência de
-                            quadra para transformar o desempenho dos nossos atletas.</p>
+                        <ul>
+                            <li>Preparador Físico de Tênis, certificado pela ITF - International Tennis Federation em
+                                preparação física avançada nível 3.</li>
+                            <li>Graduado em Educação Física, especializado na condução de programas de treinamento
+                                voltados para a performace dentro de quadra.</li>
+                            <li>Em sua carreira atua com atletas juvenis ITF, amadores de primeira classe e também na
+                                preparação física da equipe competitiva Tiago Lopes.</li>
+                            <li>Membro da mentoria de preparação física da CBT - Confederação Brasileira de Tênis.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -667,8 +712,8 @@
 
             <div class="prints-grid">
                 <figure class="print-card">
-                    <img src="assets/images/dep.kohama.png"
-                        alt="Depoimento de Gui Kohama, aluno da consultoria online" loading="lazy">
+                    <img src="assets/images/dep.kohama.png" alt="Depoimento de Gui Kohama, aluno da consultoria online"
+                        loading="lazy">
                     <figcaption class="print-card__legenda">
                         <span class="print-card__nome">Guilherme Kohama</span>
                         <span class="print-card__meta">Consultoria Online</span>
@@ -676,8 +721,8 @@
                 </figure>
 
                 <figure class="print-card">
-                    <img src="assets/images/dep.portela.png"
-                        alt="Depoimento de Rafa Portela, aluno da consultoria online" loading="lazy">
+                    <img src="assets/images/portela.png" alt="Depoimento de Rafa Portela, aluno da consultoria online"
+                        loading="lazy">
                     <figcaption class="print-card__legenda">
                         <span class="print-card__nome">Rafael Portela</span>
                         <span class="print-card__meta">Consultoria Online</span>

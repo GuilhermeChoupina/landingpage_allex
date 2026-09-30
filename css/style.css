@@ -518,6 +518,28 @@ h3 {
     display: block;
 }
 
+.hero__media-group {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    width: 100%;
+}
+
+.hero__media-group .hero__media {
+    max-width: 260px;
+}
+
+@media (max-width: 900px) {
+    .hero__media-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__media-group .hero__media {
+        max-width: 320px;
+    }
+}
+
 @media (max-width: 900px) {
     .hero__container {
         grid-template-columns: 1fr;
@@ -1423,7 +1445,7 @@ h3 {
 .sobre__hint-text {
     max-width: 0;
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
@@ -1434,7 +1456,7 @@ h3 {
 
 .sobre__hint:hover .sobre__hint-text {
     max-width: 280px;
-    max-height: 200px;
+    max-height: 300px;
     opacity: 1;
     padding: var(--spacing-md);
     margin-top: var(--spacing-sm);
@@ -1445,6 +1467,23 @@ h3 {
     color: white;
     line-height: 1.6;
     text-align: right;
+}
+
+.sobre__hint-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sobre__hint-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sobre__hint-text::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.sobre__hint-text::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
